@@ -3,6 +3,9 @@ import AgencyHeroSection from "@/components/ClientSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/Navbar";
+import { PricingSection } from "@/components/Pricing";
+import TeamSection from "@/components/team";
+
 
 
 export default function page() {
@@ -11,7 +14,8 @@ export default function page() {
       <NavBar/>
       <HeroSection/>
       <AboutUS/>
-      <AgencyHeroSection/>
+      <TeamSection/>
+      <PricingSection/>
       <Footer/>
     </div>
   )

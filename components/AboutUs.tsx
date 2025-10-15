@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ChartBarMultiple } from './BarChart';
 import { ChartPieLabelCustom } from './PieChart';
+import { AnimatedBeamDemo } from './AppIntegrations';
 
 export default function AboutUS() {
   return (
@@ -27,38 +28,7 @@ export default function AboutUS() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-4 md:p-6 shadow-md ">
-                <div className="text-sm font-medium text-gray-600 mb-4">Strengthen Client Relationships</div>
-                <div className="bg-white rounded-xl p-2 md:p-4 shadow-sm w-70">
-                  {/* Client List */}
-                  <div className="space-y-3">
-                    <ClientRow
-                      name="John Clark"
-                      email="j.clark@email.com"
-                      time="Today"
-                      status="Client"
-                      color="bg-blue-500"
-                      initial="J"
-                    />
-                    <ClientRow
-                      name="Diana Smith"
-                      email="d.smith@email.com"
-                      time="2 days ago"
-                      status="Staff"
-                      color="bg-white"
-                      initial="D"
-                    />
-                    <ClientRow
-                      name="Ilya Malek"
-                      email="malek@email.com"
-                      time="5 days ago"
-                      status="Client"
-                      color="bg-blue-500"
-                      initial="M"
-                    />
-                  </div>
-                </div>
-              </div>
+                <AnimatedBeamDemo/>
             </CardContent>
           </Card>
 
@@ -107,7 +77,19 @@ export default function AboutUS() {
           </Card>
 
           {/* Generate Insights Card */}
-         <ChartBarMultiple/>
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <div className="text-sm font-medium text-gray-600 mb-2">Generate Insights</div>
+              <CardTitle className="text-2xl font-bold mb-2">Turn data into decisions</CardTitle>
+              <CardDescription className="text-base text-gray-600">
+                Generate report summaries and spot new opportunities in seconds. Finally! AI that helps you with more than tedious tasks.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+               <ChartBarMultiple/>
+            </CardContent>
+          </Card>
+        
 
         </div>
       </div>
