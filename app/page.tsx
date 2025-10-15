@@ -1,10 +1,10 @@
 import AboutUS from "@/components/AboutUs";
-import AgencyHeroSection from "@/components/ClientSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/Navbar";
 import { PricingSection } from "@/components/Pricing";
 import TeamSection from "@/components/team";
+import { ReviewCardTestimonials } from "@/components/Testimonals";
 
 
 
@@ -15,6 +15,7 @@ export default function page() {
       <HeroSection/>
       <AboutUS/>
       <TeamSection/>
+      <ReviewCardTestimonials/>
       <PricingSection/>
       <Footer/>
     </div>
