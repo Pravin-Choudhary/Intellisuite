@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ChartBarMultiple } from './BarChart';
+import { ChartPieLabelCustom } from './PieChart';
 
 export default function AboutUS() {
   return (
@@ -101,24 +102,7 @@ export default function AboutUS() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl p-6 shadow-md">
-                <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <div className="text-center font-semibold text-gray-700 mb-4">Monthly Reports</div>
-                  <div className="flex items-end justify-center gap-3 h-24">
-                    <div className="w-8 bg-blue-200 h-12 rounded"></div>
-                    <div className="w-8 bg-blue-200 h-8 rounded"></div>
-                    <div className="w-8 bg-blue-600 h-20 rounded"></div>
-                    <div className="flex items-center justify-center w-16 h-16">
-                      <div className="w-14 h-14 rounded-full border-8 border-yellow-400 border-t-green-400 border-r-blue-400 border-b-purple-400"></div>
-                    </div>
-                  </div>
-                  <div className="mt-4 h-12">
-                    <svg viewBox="0 0 200 30" className="w-full">
-                      <path d="M 0 15 Q 50 5, 100 15 T 200 15" stroke="#94a3b8" strokeWidth="2" fill="none" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
+              <ChartPieLabelCustom/>
             </CardContent>
           </Card>
 

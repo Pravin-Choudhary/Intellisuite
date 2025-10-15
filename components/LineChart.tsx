@@ -42,7 +42,7 @@ const chartConfig = {
 
 export function ChartLineDots() {
   return (
-    <Card className="bg-white border-gray-200 shadow-sm space-y-2">
+    <Card className="bg-white border-gray-200 shadow-sm space-y-2 w-65 md:w-60 lg:w-72">
       <CardHeader>
                     <CardTitle>Profit Graph</CardTitle>
                     <CardDescription>Last Month</CardDescription>

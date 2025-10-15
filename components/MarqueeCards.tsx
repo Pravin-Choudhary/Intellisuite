@@ -24,7 +24,7 @@ const DashboardCard = ({ type }: { type: string }) => {
   switch (type) {
     case 'statistics':
       return (
-        <Card className="bg-white border-gray-200 shadow-sm w-72">
+        <Card className="bg-white border-gray-200 shadow-sm w-65 md:w-60 lg:w-72">
           <CardContent className="p-6 space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-semibold text-gray-900">Statistics</h3>
@@ -65,7 +65,7 @@ const DashboardCard = ({ type }: { type: string }) => {
 
     case 'revenue':
       return (
-        <Card className="bg-white border-gray-200 shadow-sm w-72">
+        <Card className="bg-white border-gray-200 shadow-sm w-65 md:w-60 lg:w-72">
           <CardContent className="p-6 space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-gray-500 text-xs">Last week</span>
@@ -89,7 +89,7 @@ const DashboardCard = ({ type }: { type: string }) => {
 
     case 'profit':
       return (
-        <Card className="bg-white border-gray-200 shadow-sm w-72">
+        <Card className="bg-white border-gray-200 shadow-sm w-65 md:w-60 lg:w-72">
           <CardContent className="p-6 space-y-3">
             <div className="flex items-center justify-between">
               <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
@@ -113,7 +113,7 @@ const DashboardCard = ({ type }: { type: string }) => {
 
     case 'total-revenue':
       return (
-        <Card className="bg-white border-gray-200 shadow-sm w-72">
+        <Card className="bg-white border-gray-200 shadow-sm w-65 md:w-60 lg:w-72">
           <CardContent className="p-6 space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -144,9 +144,30 @@ const DashboardCard = ({ type }: { type: string }) => {
   }
 }
 
+// Horizontal Marquee Component for mobile
+export function MarqueeHorizontal() {
+  return (
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden md:hidden">
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {firstRow.map((card) => (
+          <DashboardCard key={card.id} type={card.type} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {secondRow.map((card) => (
+          <DashboardCard key={card.id} type={card.type} />
+        ))}
+      </Marquee>
+      <div className="from-gray-50 pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+      <div className="from-gray-50 pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+    </div>
+  )
+}
+
+// Vertical Marquee Component for desktop
 export function MarqueeVertical() {
   return (
-    <div className="relative flex h-[600px] w-full flex-row items-center justify-center overflow-hidden">
+    <div className="relative hidden md:flex h-[600px] md:w-full flex-row items-center justify-center overflow-hidden">
       <Marquee pauseOnHover vertical className="[--duration:20s]">
         {firstRow.map((card) => (
           <DashboardCard key={card.id} type={card.type} />
