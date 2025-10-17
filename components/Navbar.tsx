@@ -1,5 +1,5 @@
   import { useId } from "react"
-  import { HouseIcon,InfoIcon , User2Icon , LightbulbIcon } from "lucide-react"
+  import { HouseIcon,InfoIcon , User2Icon , LightbulbIcon, BadgeIndianRupee } from "lucide-react"
 
   import { Button } from "@/components/ui/button"
 
@@ -18,10 +18,10 @@
 
   // Navigation links array to be used in both desktop and mobile menus
   const navigationLinks = [
-    { href: "#home", label: "Home", icon: HouseIcon, active: true },
+    { href: "#hero", label: "Home", icon: HouseIcon, active: true },
     { href: "#about-us", label: "About us", icon: InfoIcon },
     { href: "#team", label: "Team", icon: User2Icon },
-    { href: "#solutions", label: "Solutions", icon: LightbulbIcon },
+    { href: "#pricing", label: "Pricing", icon: BadgeIndianRupee },
   ]
 
   export default function NavBar() {
