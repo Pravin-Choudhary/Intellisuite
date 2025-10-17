@@ -158,8 +158,8 @@ export function MarqueeHorizontal() {
           <DashboardCard key={card.id} type={card.type} />
         ))}
       </Marquee>
-      <div className="from-gray-50 pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-      <div className="from-gray-50 pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
     </div>
   )
 }
@@ -178,8 +178,8 @@ export function MarqueeVertical() {
           <DashboardCard key={card.id} type={card.type} />
         ))}
       </Marquee>
-      <div className="from-gray-50 pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b"></div>
-      <div className="from-gray-50 pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t"></div>
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t"></div>
     </div>
   )
 }
