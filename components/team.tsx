@@ -3,39 +3,42 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 
 const members = [
     {
-        name: 'Venu Gopal Agarwal',
-        role: 'Chief Technology Officer',
-        designation: 'CTO',
-        bio: 'Visionary technology leader overseeing innovation, strategic growth, and sustainable digital transformation across the organization.',
-        primarySkill: 'Leadership & Innovation',
-        skills: ['Strategic Planning', 'Decision Making', 'Innovation Management', 'Team Leadership']
+        name: 'Aarav Mehta',
+        role: 'Data Analyst',
+        designation: 'Senior Analyst',
+        avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
     },
     {
-        name: 'Kartik Agarwal',
-        role: 'Software Engineer',
-        designation: 'Full Stack Developer',
-        bio: 'Creative and detail-oriented engineer focused on building reliable and user-friendly software that enhances digital experiences.',
-        primarySkill: 'Problem Solving',
-        skills: ['Analytical Thinking', 'Collaboration', 'Adaptability', 'Continuous Learning']
+        name: 'Shivam Kumar',
+        role: 'Data Visualization Expert',
+        designation: 'CEO & Co-founder',
+        avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
     },
     {
-        name: 'Alka Fernandes',
-        role: 'Data Scientist',
-        designation: 'Machine Learning Specialist',
-        bio: 'Insight-driven professional passionate about uncovering trends and translating data into actionable business intelligence.',
-        primarySkill: 'Data-Driven Analysis',
-        skills: ['Critical Thinking', 'Curiosity', 'Communication', 'Research Skills']
-    },
-    {
-        name: 'Ajin Anthony',
+        name: 'Rohit Sharma',
         role: 'Data Engineer',
-        designation: 'Big Data Engineer',
-        bio: 'Efficient data strategist with expertise in designing structured solutions to support analytical and business goals.',
-        primarySkill: 'Data Management',
-        skills: ['Attention to Detail', 'Process Optimization', 'Time Management', 'Collaboration']
+        designation: 'Lead Engineer',
+        avatar: 'https://avatars.githubusercontent.com/u/99137927?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
+    },
+    {
+        name: 'Vikram Deshmukh',
+        role: 'Data Scientist',
+        designation: 'Chief Scientist',
+        avatar: 'https://avatars.githubusercontent.com/u/31113941?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
     },
 ]
-
 
 function TeamCard({ member }: { member: any }) {
     return (

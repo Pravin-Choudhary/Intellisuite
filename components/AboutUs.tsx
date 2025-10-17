@@ -133,7 +133,7 @@ export default function AboutUS() {
             </CardHeader>
             <CardContent>
                {/* <ChartBarMultiple/> */}
-                <div className="space-y-1 mb-6">
+                <div className="space-y-3 mb-6">
               {[
                 { 
                   icon: <Lock className="w-5 h-5" />, 
@@ -166,23 +166,12 @@ export default function AboutUS() {
                   <p className="text-gray-700 flex-1 text-sm sm:text-base">{item.text}</p>
                 </div>
               ))}
-
-            <div className='p-3 sm:p-4'>
-              <Badge variant="outline" className="gap-1.5">
-                <span
-                  className="size-2 rounded-full bg-[#3b82f6]"
-                  aria-hidden="true"
-                ></span>
-               <span className='text-[14px] text-foreground tracking-wide'>Powered by Google Cloud Security</span>
-              </Badge>
             </div>
-          </div>
 
-            {/* <div className="flex items-center gap-2 sm:gap-4 p-1 sm:p-2 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl border border-blue-200 mb-2">
-              <Cloud className="w-5 h-5 sm:w-8 sm:h-8 text-blue-[] flex-shrink-0" />
+            <div className="flex items-center gap-3 sm:gap-4 p-1 sm:p-2 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl border border-blue-200 mb-2">
+              <Cloud className="w-5 h-5 sm:w-8 sm:h-8 text-blue-600 flex-shrink-0" />
               <p className="font-semibold text-gray-900 text-sm sm:text-base">Powered by Google Cloud Security</p>
-            </div> */}
-
+            </div>
              <MessageDialog title='Security Details' description='We use OAuth, end-to-end encryption, and keep dashboards within your Google account — no external storage.' triggerText='Learn How We Keep Your Data Safe' className='w-full' variantType='outline' />
             </CardContent>
           </Card>

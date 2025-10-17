@@ -27,14 +27,14 @@ const reviews = [
     img: "https://avatar.vercel.sh/aarav",
   },
   {
-    name: "Dillip Agarwal",
-    username: "@Dillusteelsuppliers",
+    name: "Karan Patel",
+    username: "@karan",
     body: "Thanks to their AI-powered dashboards, our reporting time dropped from hours to minutes.",
     img: "https://avatar.vercel.sh/karan",
   },
   {
-    name: "Shalu Sultania",
-    username: "@swagsatrangi",
+    name: "Vikram Deshmukh",
+    username: "@vikram",
     body: "Incredible experience! Their analytics solution gave our business a clear performance overview in real time.",
     img: "https://avatar.vercel.sh/vikram",
   },
