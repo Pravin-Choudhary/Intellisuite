@@ -1,53 +1,91 @@
+import { Badge } from "./ui/badge"
+import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
+
 const members = [
     {
         name: 'Aarav Mehta',
         role: 'Data Analyst',
+        designation: 'Senior Analyst',
         avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
     },
     {
         name: 'Shivam Kumar',
-        role: ' Data Visualization Expert',
+        role: 'Data Visualization Expert',
+        designation: 'CEO & Co-founder',
         avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
     },
     {
         name: 'Rohit Sharma',
         role: 'Data Engineer',
+        designation: 'Lead Engineer',
         avatar: 'https://avatars.githubusercontent.com/u/99137927?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
     },
     {
         name: 'Vikram Deshmukh',
         role: 'Data Scientist',
+        designation: 'Chief Scientist',
         avatar: 'https://avatars.githubusercontent.com/u/31113941?v=4',
+        bio: 'Former Google PM with 10+ years building products that millions use daily. Passionate about creating meaningful impact through technology.',
+        primarySkill: 'Data Scientist',
+        skills: ['Product Strategy', 'Team Leadership', 'Growth']
     },
 ]
 
+function TeamCard({ member }: { member: any }) {
+    return (
+        <Card>
+            <CardHeader>
+                <CardTitle className="flex justify-center text-[20px] font-semibold text-foreground">{member.name}</CardTitle>
+                <CardDescription className="flex justify-center">
+                    <h4 className="text-[#3b82f6] text-md font-semibold">{member.designation}</h4>
+                </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-5">
+                <div className="flex justify-center">
+                    <Badge className="flex justify-center text-secondary-foreground" variant='outline'>{member.primarySkill}</Badge>
+                </div>
+                <div className="flex justify-start tracking-tight">
+                    <p className="text-[13px]/5 text-muted-foreground/95 font-medium">
+                        {member.bio}
+                    </p>
+                </div>
+
+                <div className="flex justify-start gap-2 mt-3 flex-wrap">
+                    {member.skills.map((skill: string, index: number) => (
+                        <Badge key={index} className="text-secondary-foreground" variant='secondary'>{skill}</Badge>
+                    ))}
+                </div>
+            </CardContent>
+        </Card>
+    )
+}
+
 export default function TeamSection() {
     return (
-        <section className="py-12 md:py-25">
+        <section className="py-12 md:py-25 ">
         
             <div className='mb-12 text-center sm:mb-16 lg:mb-24'>
-            <h2 className='mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl'>Get to Know Our Amazing Team</h2>
-            <p className='text-muted-foreground text-xl'>
-                Meet the Passionate Experts Behind Our Success and Learn More About Their Roles.
-            </p>
+                <h2 className='mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl'>Get to Know Our Amazing Team</h2>
+                <p className='text-muted-foreground text-xl'>
+                    Meet the Passionate Experts Behind Our Success and Learn More About Their Roles.
+                </p>
             </div>
-            <div className="mx-auto max-w-3xl px-8 lg:px-0">
+            
+            <div className=" px-4 sm:px-8 md:px-12 lg:px-20 p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 place-items-center">
+                {members.map((member, index) => (
+                    <TeamCard key={index} member={member} />
+                ))}
+            </div>
 
-                <div>
-                    <h3 className="mb-6 text-lg font-medium">Members</h3>
-                    <div className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
-                        {members.map((member, index) => (
-                            <div key={index}>
-                                <div className="bg-background size-20 rounded-full border p-0.5 shadow shadow-zinc-950/5">
-                                    <img className="aspect-square rounded-full object-cover" src={member.avatar} alt={member.name} height="460" width="460" loading="lazy" />
-                                </div>
-                                <span className="mt-2 block text-sm">{member.name}</span>
-                                <span className="text-muted-foreground block text-xs">{member.role}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
         </section>
     )
 }

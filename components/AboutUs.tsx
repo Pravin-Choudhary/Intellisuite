@@ -4,6 +4,9 @@ import { Badge } from '@/components/ui/badge';
 import { ChartBarMultiple } from './BarChart';
 import { ChartPieLabelCustom } from './PieChart';
 import { AnimatedBeamDemo } from './AppIntegrations';
+import { Button } from './ui/button';
+import { BarChart3, CheckCircle, Cloud, Lock, Shield, TrendingUp, Zap } from 'lucide-react';
+import MessageDialog from './MessageDialog';
 
 export default function AboutUS() {
   return (
@@ -66,13 +69,56 @@ export default function AboutUS() {
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
             <CardHeader>
               <div className="text-sm font-medium text-gray-600 mb-2">Automate reporting</div>
-              <CardTitle className="text-2xl font-bold mb-2">Faster reporting, smarter conversations</CardTitle>
+              <CardTitle className="text-2xl font-bold mb-2">Your Business at a Glance — With Smart, Real-Time Dashboards</CardTitle>
               <CardDescription className="text-base text-gray-600">
-                Build a report in under 30 minutes, or faster with a template. Use your saved time to have better conversations with your clients.
+               Our plug-and-play dashboards connect with:
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <ChartPieLabelCustom/>
+              {/* <ChartPieLabelCustom/> */}
+              <div className="space-y-3 mb-6">
+              {[
+                { 
+                  icon: <Zap className="w-5 h-5" />, 
+                  title: "Google Sheets & CRMs", 
+                  desc: "Sync your daily sales and leads",
+                  color: "blue"
+                },
+                { 
+                  icon: <TrendingUp className="w-5 h-5" />, 
+                  title: "Shopify / WooCommerce", 
+                  desc: "Track orders and revenue in real-time",
+                  color: "purple"
+                },
+                { 
+                  icon: <BarChart3 className="w-5 h-5" />, 
+                  title: "Meta / Instagram Insights", 
+                  desc: "Monitor engagement and ad ROI",
+                  color: "pink"
+                },
+                { 
+                  icon: <Cloud className="w-5 h-5" />, 
+                  title: "All on Google Cloud", 
+                  desc: "No tech setup required",
+                  color: "indigo"
+                }
+              ].map((item, i) => (
+                <div 
+                  key={i} 
+                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-blue-50 transition-colors duration-300 cursor-pointer"
+                >
+                  <div className={`w-10 h-10 bg-${item.color}-100 rounded-lg flex items-center justify-center text-${item.color}-600 flex-shrink-0`}>
+                    {item.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-gray-900 text-sm sm:text-base">{item.title}</p>
+                    <p className="text-xs sm:text-sm text-gray-600 mt-1">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+              
+              <MessageDialog title='Sample Dashboards' description='We provide Looker Studio template previews for social, sales, and finance dashboards.' triggerText='See Sample Dashboards →' className='w-full'/>
             </CardContent>
           </Card>
 
@@ -80,17 +126,56 @@ export default function AboutUS() {
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
             <CardHeader>
               <div className="text-sm font-medium text-gray-600 mb-2">Generate Insights</div>
-              <CardTitle className="text-2xl font-bold mb-2">Turn data into decisions</CardTitle>
+              <CardTitle className="text-2xl font-bold mb-2">Your Data. Your Control.</CardTitle>
               <CardDescription className="text-base text-gray-600">
-                Generate report summaries and spot new opportunities in seconds. Finally! AI that helps you with more than tedious tasks.
+                We take your privacy seriously — every dashboard runs securely on Google’s infrastructure with:
               </CardDescription>
             </CardHeader>
             <CardContent>
-               <ChartBarMultiple/>
+               {/* <ChartBarMultiple/> */}
+                <div className="space-y-3 mb-6">
+              {[
+                { 
+                  icon: <Lock className="w-5 h-5" />, 
+                  text: "End-to-end encryption for all data connections", 
+                  color: "blue" 
+                },
+                { 
+                  icon: <CheckCircle className="w-5 h-5" />, 
+                  text: "OAuth-based access — you control what's shared", 
+                  color: "green" 
+                },
+                { 
+                  icon: <Cloud className="w-5 h-5" />, 
+                  text: "No external storage — your data never leaves your Google account", 
+                  color: "purple" 
+                },
+                { 
+                  icon: <Shield className="w-5 h-5" />, 
+                  text: "Compliance-ready setup for GDPR and Indian data protection norms", 
+                  color: "orange" 
+                }
+              ].map((item, i) => (
+                <div 
+                  key={i} 
+                  className="flex  items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-green-50 transition-colors duration-300"
+                >
+                  <div className={`w-10 h-10 bg-${item.color}-100 rounded-lg flex items-center justify-center text-${item.color}-600 flex-shrink-0`}>
+                    {item.icon}
+                  </div>
+                  <p className="text-gray-700 flex-1 text-sm sm:text-base">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-3 sm:gap-4 p-1 sm:p-2 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl border border-blue-200 mb-2">
+              <Cloud className="w-5 h-5 sm:w-8 sm:h-8 text-blue-600 flex-shrink-0" />
+              <p className="font-semibold text-gray-900 text-sm sm:text-base">Powered by Google Cloud Security</p>
+            </div>
+             <MessageDialog title='Security Details' description='We use OAuth, end-to-end encryption, and keep dashboards within your Google account — no external storage.' triggerText='Learn How We Keep Your Data Safe' className='w-full' variantType='outline' />
             </CardContent>
           </Card>
         
-
         </div>
       </div>
     </div>

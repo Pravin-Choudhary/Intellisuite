@@ -10,7 +10,7 @@ import { ReviewCardTestimonials } from "@/components/Testimonals";
 
 export default function page() {
   return (
-    <div className="space-y-5">
+    <div className="space-y-2 md:space-y-5">
       <NavBar/>
       <HeroSection/>
       <AboutUS/>
