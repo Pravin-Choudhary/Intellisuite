@@ -6,37 +6,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <div className="bg-gray-900 text-white">
-      {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-12">
-            {/* Left Content */}
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                See how{" "}
-                <span className="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg">
-                  7000+
-                </span>{" "}
-                marketing agencies help clients win
-              </h2>
-              
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full font-semibold shadow-lg">
-                Start Your Trial Now
-              </Button>
-              
-              <p className="text-gray-600 text-sm">
-                Free 14-day trial. No credit card required.
-              </p>
-            </div>
-
-            {/* Right Illustration */}
-            <div className="flex justify-center">
-                <Image src='/getStarted.webp' width={400} height={400} alt='intellisuiteLogo'/>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="bg-gray-900 text-white">  
 
       {/* Footer Section */}
       <div className="border-t border-gray-800">

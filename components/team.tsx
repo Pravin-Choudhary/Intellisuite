@@ -43,7 +43,8 @@ function TeamCard({ member }: { member: any }) {
             <CardHeader>
                 <CardTitle className="flex justify-center text-[20px] font-semibold text-foreground">{member.name}</CardTitle>
                 <CardDescription className="flex justify-center">
-                    <h4 className="text-[#3b82f6] text-md font-semibold">{member.designation}</h4>
+                    <Badge className="text-[#3b82f6] text-md font-semibold" variant={"secondary"}>{member.designation}</Badge>
+                    {/* <h4 className="text-[#3b82f6] text-lg font-semibold"></h4> */}
                 </CardDescription>
             </CardHeader>
             <CardContent className="space-y-5">

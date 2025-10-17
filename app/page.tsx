@@ -1,4 +1,5 @@
 import AboutUS from "@/components/AboutUs";
+import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/Navbar";
@@ -17,6 +18,7 @@ export default function page() {
       <TeamSection/>
       <ReviewCardTestimonials/>
       <PricingSection/>
+      <CTA/>
       <Footer/>
     </div>
   )
