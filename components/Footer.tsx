@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <div className="bg-gray-900 text-white">  
+    <div className="bg-foreground text-white">
 
       {/* Footer Section */}
       <div className="border-t border-gray-800">
