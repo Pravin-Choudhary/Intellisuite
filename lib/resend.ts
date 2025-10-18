@@ -16,7 +16,7 @@ export const sendEmail = async ({name , email ,social, message} : sendEmailProps
     try {
         const data = await resend.emails.send({
                             from: "IntelliSuite <onboarding@resend.dev>",
-                            to: "pravinchoudhary.aesxa29@gmail.com",
+                            to: "info@intellisuite.in",
                             subject: "New Dashboard Request",
                             react: ContactEmail({ name, email, social, message }),
                         });
