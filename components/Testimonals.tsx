@@ -27,7 +27,7 @@ const reviews = [
     img: "https://avatar.vercel.sh/aarav",
   },
   {
-    name: "Dillip Agarwal",
+    name: "Dilipp Agarwal",
     username: "@Dillusteelsuppliers",
     body: "Thanks to their AI-powered dashboards, our reporting time dropped from hours to minutes.",
     img: "https://avatar.vercel.sh/karan",

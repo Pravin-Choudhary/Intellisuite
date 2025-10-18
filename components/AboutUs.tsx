@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ChartBarMultiple } from './BarChart';
 import { ChartPieLabelCustom } from './PieChart';
 import { AnimatedBeamDemo } from './AppIntegrations';
-import { Button } from './ui/button';
 import { BarChart3, CheckCircle, Cloud, Lock, Shield, TrendingUp, Zap } from 'lucide-react';
 import MessageDialog from './MessageDialog';
+import { ChartTooltipIndicatorLine } from './TooltipChart';
 
 export default function AboutUS() {
   return (
@@ -35,33 +34,24 @@ export default function AboutUS() {
             </CardContent>
           </Card>
 
-          {/* Customize Dashboards Card */}
+{/* Customize Dashboards Card */}
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
             <CardHeader>
               <div className="text-sm font-medium text-gray-600 mb-2">Customize dashboards</div>
               <CardTitle className="text-2xl font-bold mb-2">Stay on top of metrics</CardTitle>
               <CardDescription className="text-base text-gray-600">
-                Make dashboards look exactly the way you want in seconds. Get a complete and accurate view of your clients' metrics any time you need.
+                Get dashboards look exactly the way you want. Get a complete and accurate view of your Data.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-2xl p-6 shadow-md">
-                <div className="text-sm font-medium text-gray-600 mb-4">Stay on Top of Metrics</div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-xl p-6 shadow-sm flex items-center justify-center">
-                    <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <div className="text-blue-600">📧</div>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl p-6 shadow-sm flex items-center justify-center">
-                    <div className="w-20 h-20 bg-purple-100 rounded-lg flex items-center justify-center relative">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-0 h-0 border-l-8 border-l-transparent border-b-12 border-b-purple-600 border-r-8 border-r-transparent rotate-90"></div>
-                      </div>
-                    </div>
-                  </div>
+            <CardContent className='border p-2 sm:p-4'>
+             <div className='grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4'>
+                <div className="w-full">
+                  <ChartPieLabelCustom/>
                 </div>
-              </div>
+                <div className="w-full">
+                  <ChartTooltipIndicatorLine/>
+                </div>
+             </div>
             </CardContent>
           </Card>
 
@@ -168,7 +158,7 @@ export default function AboutUS() {
               ))}
 
             <div className='p-3 sm:p-4'>
-              <Badge variant="outline" className="gap-1.5">
+              <Badge variant="secondary" className="gap-1.5">
                 <span
                   className="size-2 rounded-full bg-[#3b82f6]"
                   aria-hidden="true"

@@ -5,7 +5,7 @@ const members = [
     {
         name: 'Venu Gopal Agarwal',
         role: 'Chief Technology Officer',
-        designation: 'CTO',
+        designation: 'Chief Technology Officer',
         bio: 'Visionary technology leader overseeing innovation, strategic growth, and sustainable digital transformation across the organization.',
         primarySkill: 'Leadership & Innovation',
         skills: ['Strategic Planning', 'Decision Making', 'Innovation Management', 'Team Leadership']
@@ -19,7 +19,7 @@ const members = [
         skills: ['Analytical Thinking', 'Collaboration', 'Adaptability', 'Continuous Learning']
     },
     {
-        name: 'Alka Fernandes',
+        name: 'Shreya Kedia',
         role: 'Data Scientist',
         designation: 'Machine Learning Specialist',
         bio: 'Insight-driven professional passionate about uncovering trends and translating data into actionable business intelligence.',
@@ -29,7 +29,7 @@ const members = [
     {
         name: 'Ajin Anthony',
         role: 'Data Engineer',
-        designation: 'Big Data Engineer',
+        designation: 'Data Engineer',
         bio: 'Efficient data strategist with expertise in designing structured solutions to support analytical and business goals.',
         primarySkill: 'Data Management',
         skills: ['Attention to Detail', 'Process Optimization', 'Time Management', 'Collaboration']

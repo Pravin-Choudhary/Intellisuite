@@ -19,12 +19,12 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4 text-gray-400">Product</h3>
               <ul className="space-y-3 text-gray-300">
-                <li><a href="#" className="hover:text-white transition">Platform features</a></li>
-                <li><a href="#" className="hover:text-white transition">Agency solutions</a></li>
-                <li><a href="#" className="hover:text-white transition">Data integrations</a></li>
+                <li><a href="#about-us" className="hover:text-white transition">Platform features</a></li>
+                <li><a href="#about-us" className="hover:text-white transition">Agency solutions</a></li>
+                <li><a href="#about-us" className="hover:text-white transition">Data integrations</a></li>
                 <li><a href="#" className="hover:text-white transition">Compare platforms</a></li>
-                <li><a href="#" className="hover:text-white transition">Reviews</a></li>
-                <li><a href="#" className="hover:text-white transition">Pricing</a></li>
+                <li><a href="#reviews" className="hover:text-white transition">Reviews</a></li>
+                <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
               </ul>
             </div>
 
@@ -32,7 +32,7 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4 text-gray-400">Company</h3>
               <ul className="space-y-3 text-gray-300">
-                <li><a href="#" className="hover:text-white transition">About</a></li>
+                <li><a href="#team" className="hover:text-white transition">About</a></li>
                 <li>
                   <a href="#" className="hover:text-white transition inline-flex items-center gap-2">
                     Careers
@@ -49,7 +49,7 @@ export default function Footer() {
               <h3 className="font-semibold mb-4 text-gray-400">Get Started</h3>
               <ul className="space-y-3 text-gray-300">
                 <li><a href="#" className="hover:text-white transition">Start Free Trial</a></li>
-                <li><a href="#" className="hover:text-white transition">Book a Demo</a></li>
+                <li><a href="#cta" className="hover:text-white transition">Book a Demo</a></li>
                 <li><a href="#" className="hover:text-white transition">Quick Start Guide</a></li>
               </ul>
             </div>
@@ -61,7 +61,7 @@ export default function Footer() {
               {/* Social Icons */}
               <div className="flex items-center gap-4">
                 <a href="#" className="text-gray-400 hover:text-white transition">
-                  <Instagram className="w-5 h-5" />
+                  <Instagram  className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white transition">
                   <Facebook className="w-5 h-5" />
