@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useId } from 'react';
 import {
   MotionValue,
@@ -6,10 +7,12 @@ import {
   useSpring,
   useTransform,
   motionValue,
+  Transition,
 } from 'motion/react';
 import useMeasure from 'react-use-measure';
 
-const TRANSITION = {
+// ✅ Fix: Explicit Transition type or 'as const'
+const TRANSITION: Transition = {
   type: 'spring',
   stiffness: 280,
   damping: 18,
@@ -26,8 +29,8 @@ function Digit({ value, place }: { value: number; place: number }) {
   }, [animatedValue, valueRoundedToPlace]);
 
   return (
-    <div className='relative inline-block w-[1ch] overflow-x-visible overflow-y-clip leading-none tabular-nums'>
-      <div className='invisible'>0</div>
+    <div className="relative inline-block w-[1ch] overflow-x-visible overflow-y-clip leading-none tabular-nums">
+      <div className="invisible">0</div>
       {Array.from({ length: 10 }, (_, i) => (
         <Number key={i} mv={animatedValue} number={i} />
       ))}
@@ -52,10 +55,10 @@ function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
     return memo;
   });
 
-  // don't render the animated number until we know the height
+  // Don’t render animated number until height is known
   if (!bounds.height) {
     return (
-      <span ref={ref} className='invisible absolute'>
+      <span ref={ref} className="invisible absolute">
         {number}
       </span>
     );
@@ -65,7 +68,7 @@ function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
     <motion.span
       style={{ y }}
       layoutId={`${uniqueId}-${number}`}
-      className='absolute inset-0 flex items-center justify-center'
+      className="absolute inset-0 flex items-center justify-center"
       transition={TRANSITION}
       ref={ref}
     >
@@ -96,7 +99,7 @@ export function SlidingNumber({
   );
 
   return (
-    <div className='flex items-center'>
+    <div className="flex items-center">
       {value < 0 && '-'}
       {integerDigits.map((_, index) => (
         <Digit
